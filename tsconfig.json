@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@shapes/*": ["src/views/components/shapes/*"],
+      "@c3/css": ["packages/css/src/index"],
+      "@c3/uikits": ["packages/uikits/src/index"],
+      "@c3/dom": ["packages/dom/src/index"],
+      "@c3/utils": ["packages/utils/src/index"],
+      "@c3/hooks": ["packages/hooks/src/index"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
