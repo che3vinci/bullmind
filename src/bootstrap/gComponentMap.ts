@@ -1,4 +1,3 @@
-import { IDable } from '@c3/utils';
 
 export type ComponentMap = {
   [name: string]: { view: React.FC<any>; model: Ctor };

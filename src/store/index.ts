@@ -21,6 +21,6 @@ const enhance = !__TEST__
 const store = createStore(reducer as any, canvasDefaultState);
 
 store.subscribe(() => {
-  console.log('store changed');
+  // console.log('store changed');
 });
 export { store };

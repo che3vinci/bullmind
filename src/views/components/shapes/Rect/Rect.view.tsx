@@ -8,7 +8,7 @@ export const Rect: React.FC<IModelProps<RectModel>> = ({ model }) => {
   const drag = useDrag(model.id);
   const resize = useResize(model.id);
   return (
-    <Resizer onResize={resize} size={20}>
+    <Resizer onResize={resize}>
       <rect
         id={model.id}
         x={model.x}

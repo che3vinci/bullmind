@@ -1,4 +1,4 @@
-import { assert } from '@c3/utils';
+import { assert, IBox, XYBox } from '@c3/utils';
 import { immerable } from 'immer';
 import { BBox } from 'snapsvg';
 import { Direction } from '../common/constants/consts';
@@ -14,7 +14,10 @@ export default class Box implements IValuable {
     private _width: number,
     private _height: number
   ) {
-    assert(_width > 0 && _height > 0, 'width/height can not be negative');
+    assert(
+      _width >= 0 && _height >= 0,
+      'width/height can not be negative'
+    );
 
     this._left = _left;
     this._top = _top;
@@ -22,25 +25,39 @@ export default class Box implements IValuable {
     this._height = _height;
   }
 
-  public static makeFromSVGRect(box: SVGRect): Box {
+  static makeFromSVGRect(box: SVGRect): Box {
     return new Box(box.x, box.y, box.width, box.height);
   }
-
-  public static makeFromClientRect(box: ClientRect): Box {
+  static makeFromIBox(box: IBox): Box {
+    return new Box(box.x, box.y, box.width, box.height);
+  }
+  static makeFromDomRect(box: DOMRect): Box {
     return new Box(box.left, box.top, box.width, box.height);
   }
 
-  public static makeFromSnapBox(box: BBox): Box {
+  static makeFromClientRect(box: ClientRect): Box {
+    return new Box(box.left, box.top, box.width, box.height);
+  }
+  static makeFromCenter(center: Point, width: number, height: number) {
+    return new Box(
+      center.x - width / 2,
+      center.y - height / 2,
+      width,
+      height
+    );
+  }
+
+  static makeFromSnapBox(box: BBox): Box {
     return new Box(box.x, box.y, box.width, box.height);
   }
 
-  public static make(center: Point, width: number, height: number) {
+  static make(center: Point, width: number, height: number) {
     const x: number = center.x - width / 2;
     const y: number = center.y - height / 2;
     return new Box(x, y, width, height);
   }
 
-  public static makeFromCornerPoint(
+  static makeFromCornerPoint(
     left: number,
     top: number,
     right: number,
@@ -54,7 +71,7 @@ export default class Box implements IValuable {
     return new Box(left, top, width, height);
   }
 
-  public static staticBigger(box: Box, leftTop = 10, widthHeight = 20) {
+  static staticBigger(box: Box, leftTop = 10, widthHeight = 20) {
     box._left -= leftTop;
     box._top -= leftTop;
     box._height += widthHeight;
@@ -391,6 +408,14 @@ export default class Box implements IValuable {
 
   get rightBottom_N(): Point {
     return new Point(this.right, this.bottom);
+  }
+  get iBox(): XYBox {
+    return {
+      x: this._left,
+      y: this._top,
+      width: this._width,
+      height: this._height,
+    };
   }
 
   // get middlePointOfLeftEdge_N(): Point {

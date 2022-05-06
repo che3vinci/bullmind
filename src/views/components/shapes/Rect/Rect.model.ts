@@ -1,11 +1,11 @@
 import { withFill } from '@src/core/action/fill';
-import { doDrag } from '@src/core/action/drag';
+import { withDragAsTranslate } from '@src/core/action/drag';
 import { doResize } from '@src/core/action/resize';
 import { DEAULT_SHAPE_STATUS } from '@src/core/status/status';
 import { widthId, Id, withName } from '@src/core/id/index';
 import Transform from '@src/core/transform/transform';
 import { Hydratable } from '@src/core/jsonable';
-class BaseRectModel implements Hydratable {
+class BaseRectModel  {
   transform = new Transform();
   status = DEAULT_SHAPE_STATUS;
   _id = new Id();
@@ -18,14 +18,14 @@ class BaseRectModel implements Hydratable {
     public rx = 0,
     public ry = 0
   ) {}
-  hydrate(data: this) {
-    this._id.hydrate(data._id);
-    this.transform.hydrate(data.transform);
-  }
+  // hydrate(data: this) {
+  //   this._id.hydrate(data._id);
+  //   this.transform.hydrate(data.transform);
+  // }
 }
 
 export const RectModel = doResize(
-  withFill(widthId(doDrag(withName(BaseRectModel, 'rect'))))
+  withFill(widthId(withDragAsTranslate(withName(BaseRectModel, 'rect'))))
 );
 
 export type RectModel = InstanceType<typeof RectModel>;

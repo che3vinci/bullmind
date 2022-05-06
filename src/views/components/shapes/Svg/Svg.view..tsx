@@ -15,7 +15,6 @@ export const SVG: React.FC = () => {
   if (!svg) {
     return null;
   }
-  console.log('gComponentMap', gComponentMap);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

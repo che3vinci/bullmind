@@ -2,7 +2,7 @@ import { ShapeStatus } from '@src/core/status/status';
 import Transform from '@src/core/transform/transform';
 import { IDraggable } from './draggable';
 
-export const doDrag = <
+export const withDragAsTranslate = <
   T extends Ctor<{ transform: Transform; status: ShapeStatus }>
 >(
     Base: T
