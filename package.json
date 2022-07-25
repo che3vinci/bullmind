@@ -4,7 +4,6 @@
   "description": "a template",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config jest.config.ts",
     "prepare": "husky install",
     "pub": "npm version patch && npm publish ",
     "next": "npm version patch && npm publish --tag=next ",
@@ -19,10 +18,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@svgdotjs/svg.js": "^3.1.2",
-    "@types/lodash.random": "^3.2.6",
-    "@types/react-router-dom": "^5.1.8",
-    "@types/snapsvg": "^0.5.1",
     "bowser": "^2.11.0",
     "enzyme": "^3.11.0",
     "immer": "^9.0.1",
@@ -38,13 +33,16 @@
     "use-immer": "^0.5.1"
   },
   "devDependencies": {
+    "@svgdotjs/svg.js": "^3.1.2",
+    "@types/lodash.random": "^3.2.6",
+    "@types/react-router-dom": "^5.1.8",
+    "@types/snapsvg": "^0.5.1",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/react-hooks": "^7.0.0",
     "@types/enzyme": "^3.10.8",
-    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.41",
     "@types/react-dom": "^17.0.3",
@@ -54,7 +52,6 @@
     "@typescript-eslint/parser": "^5.22.0",
     "@vitejs/plugin-react": "^1.3.2",
     "css-loader": "^5.2.4",
-    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^8.14.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.26.0",
@@ -80,5 +77,9 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=10",
+    "pnpm": ">=3"
   }
 }

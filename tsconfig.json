@@ -9,8 +9,8 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "paths": {
-      "@src/*": ["src/*"],
-      "@shapes/*": ["src/views/components/shapes/*"],
+      "@src/*": ["apps/client/src/*"],
+      "@shapes/*": ["apps/client/src/views/components/shapes/*"],
       "@c3/css": ["packages/css/src/index"],
       "@c3/uikits": ["packages/uikits/src/index"],
       "@c3/dom": ["packages/dom/src/index"],
