@@ -19,10 +19,18 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
+import Database from '@ioc:Adonis/Lucid/Database'
 
 Route.get('/', async () => {
   return { hello: 'world' }
 })
 Route.group(() => {
   Route.get('/hello', 'UsersController.index')
+  Route.get('/test', async () => {
+    const users = await Database.query() // 👈 gives an instance of select query builder
+      .select('*')
+      .from('users')
+      .where({ id: 101 })
+    return users
+  })
 }).prefix('/api')
