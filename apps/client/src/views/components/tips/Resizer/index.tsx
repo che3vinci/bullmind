@@ -9,7 +9,7 @@ import {
 import { assert, IBox } from '@c3/utils';
 import { useState } from 'react';
 import { useCallback } from 'react';
-import Box from 'apps/client/src/core/boxable/box';
+import Box from '@src/core/boxable/box';
 import { useMutationObserver } from '@c3/hooks';
 
 export type ResizerProps = {

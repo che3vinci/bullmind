@@ -1,5 +1,5 @@
 import { useCommit } from '@c3/hooks';
-import { gComponentMap } from 'apps/client/src/bootstrap/gComponentMap';
+import { gComponentMap } from '@src/bootstrap/gComponentMap';
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { ICanvasState } from '../../../../store/svgReducer';

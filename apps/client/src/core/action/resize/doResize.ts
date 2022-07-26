@@ -1,4 +1,4 @@
-import Transform from 'apps/client/src/core/transform/transform';
+import Transform from '@src/core/transform/transform';
 import { Resizable } from './resizable';
 
 export const doResize = <TBase extends Ctor<{ transform: Transform }>>(

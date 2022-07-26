@@ -1,4 +1,4 @@
-import { useResize } from 'apps/client/src/core/action/resize/useResize';
+import { useResize } from '@src/core/action/resize/useResize';
 import React from 'react';
 import { useDrag } from '../../../../core/action/drag/useDrag';
 import Resizer from '../../tips/Resizer';

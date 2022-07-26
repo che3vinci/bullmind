@@ -1,5 +1,5 @@
 import { IDable } from '@c3/utils';
-import { List } from 'apps/client/src/utils/List';
+import { List } from '@src/utils/List';
 
 export type Pred<T> = (e: T, idx?: number) => boolean;
 

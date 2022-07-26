@@ -1,5 +1,5 @@
 import { SVG } from './Svg.view.';
-import { registerComponent } from 'apps/client/src/bootstrap/gComponentMap';
+import { registerComponent } from '@src/bootstrap/gComponentMap';
 import { SVGModel } from './Svg.model';
 import { immerable } from 'immer';
 

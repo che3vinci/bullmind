@@ -1,16 +1,16 @@
-import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+import Database from '@ioc:Adonis/Lucid/Database'
 
 export default class UserController {
-  public async index(ctx: HttpContextContract) {
-    return [
-      {
-        id: 1,
-        title: 'Hello world',
-      },
-      {
-        id: 2,
-        title: 'Hello universe',
-      },
-    ]
+  public async info() {
+    const users = await Database.query().select('*').from('users').where({ id: 101 })
+    return users
+  }
+  public async signup() {
+    const users = await Database.query().select('*').from('users').where({ id: 101 })
+    return users
+  }
+  public async login() {
+    const users = await Database.query().select('*').from('users').where({ id: 101 })
+    return users
   }
 }

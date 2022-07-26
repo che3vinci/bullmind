@@ -1,4 +1,4 @@
-import { registerComponent } from 'apps/client/src/bootstrap/gComponentMap';
+import { registerComponent } from '@src/bootstrap/gComponentMap';
 import { immerable } from 'immer';
 import { RectModel } from './Rect.model';
 import { Rect } from './Rect.view';

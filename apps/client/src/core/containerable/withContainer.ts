@@ -1,5 +1,5 @@
 import { IDable, isObject } from '@c3/utils';
-import { List } from 'apps/client/src/utils/List';
+import { List } from '@src/utils/List';
 import { IContainerable, Pred } from './containerable';
 
 export const withContainer = <

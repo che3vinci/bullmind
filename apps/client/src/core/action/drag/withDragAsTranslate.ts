@@ -1,5 +1,5 @@
-import { ShapeStatus } from 'apps/client/src/core/status/status';
-import Transform from 'apps/client/src/core/transform/transform';
+import { ShapeStatus } from '@src/core/status/status';
+import Transform from '@src/core/transform/transform';
 import { IDraggable } from './draggable';
 
 export const withDragAsTranslate = <
