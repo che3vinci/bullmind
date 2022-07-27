@@ -12,10 +12,14 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "vitest": "^0.19.1"
+  },
   "engines": {
     "node": ">=10",
     "pnpm": ">=3"
+  },
+  "devDependencies": {
+    "axios": "^0.27.2"
   }
 }
