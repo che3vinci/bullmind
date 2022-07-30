@@ -52,13 +52,17 @@
     "youch-terminal": "^2.1.4"
   },
   "dependencies": {
+    "@adonisjs/auth": "^8.2.1",
     "@adonisjs/core": "^5.8.5",
     "@adonisjs/lucid": "^18.1.0",
+    "@adonisjs/redis": "^7.3.0",
     "@adonisjs/repl": "^3.1.11",
     "lucid": "link:@types/@adonisjs/lucid",
     "luxon": "^3.0.1",
     "mysql": "^2.18.1",
     "node-fetch": "^3.2.9",
+    "phc-argon2": "^1.1.3",
+    "phc-bcrypt": "^1.0.7",
     "proxy-addr": "^2.0.7",
     "reflect-metadata": "^0.1.13",
     "source-map-support": "^0.5.21"
