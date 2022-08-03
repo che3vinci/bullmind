@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { SVGModel } from '@shapes/Svg';
+import { SVGModel } from '@src/views/components/shapes/Svg';
 import { Reducer } from 'react';
 import { SVG_ROOT_ID } from './constants';
 import { assert, IDable } from '@c3/utils';
